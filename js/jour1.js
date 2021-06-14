@@ -59,3 +59,15 @@ let changed;
 changed = "Bonjour";
 
 console.log(changed.replace(/o/g, 'a'));
+
+let twoLines;
+
+twoLines = "hsrtjstyjz\n srtjsrtjs";
+
+console.log(twoLines);
+
+let melange;
+
+melange = `Ceci est une string melangeant "guillemets double" et 'guillemets simple'`;
+
+console.log(melange);
