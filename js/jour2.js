@@ -178,3 +178,7 @@ roundingNumber(roundedNumber);
 roundedNumber = 12.4;
 
 roundingNumber(roundedNumber);
+
+roundedNumberString = roundedNumber.toString();
+
+console.log(roundedNumberString.substring(0,2));
