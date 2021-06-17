@@ -75,9 +75,14 @@ console.log(promo[tirageAuSort]);
 let integer = [];
 for (i = 0; i < 20; i++) {
     integer.push(Math.round(Math.random() * (100 - 0) + 0));
-    console.log(integer);
 }
 
-for (i = 0; i < integer.length; i++) {
-    
-    }
+console.log(integer);
+
+for (i = 0; i <= integer.length; i++) {
+        if (integer[i]>integer[i-1]) {
+            integer.slice(i,integer.length);
+            integer.shift();
+            console.log(integer);
+        }
+}
