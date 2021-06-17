@@ -49,7 +49,7 @@ function addUp(num) {
     let num2 = 0;
     while (i <= num) {
         num2 += i;
-        i++
+        i++;
         console.log(num2);
     }
 }
@@ -94,7 +94,25 @@ function generatePassword(num) {
 generatePassword(15);
 
 function launchDice(numberOfDice) {
-    for (i = 0; i < numberOfDice; i++) {
-        
+    let joueur1;
+    let joueur2;
+    let joueur1Final = 0;
+    let joueur2Final = 0;
+    let i = 0;
+    while (i < numberOfDice) {
+        joueur1 = Math.round(Math.random() * (6 - 1) + 1);
+        joueur1Final += joueur1;
+        joueur2 = Math.round(Math.random() * (6 - 1) + 1);
+        joueur2Final += joueur2;
+        i++;
+    }
+    console.log(joueur1Final);
+    console.log(joueur2Final);
+    if (joueur1Final > joueur2Final) {
+        console.log(`Joueur 1 a gagné ! Score : ${joueur1Final} - ${joueur2Final}`);
+    }   else {
+        console.log(`Joueur 2 a gagné ! Score : ${joueur2Final} - ${joueur1Final}`);
     }
 }
+
+launchDice(6);
