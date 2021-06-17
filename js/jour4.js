@@ -110,8 +110,10 @@ function launchDice(numberOfDice) {
     console.log(joueur2Final);
     if (joueur1Final > joueur2Final) {
         console.log(`Joueur 1 a gagné ! Score : ${joueur1Final} - ${joueur2Final}`);
-    }   else {
+    }   else if (joueur2Final > joueur1Final){
         console.log(`Joueur 2 a gagné ! Score : ${joueur2Final} - ${joueur1Final}`);
+    } else {
+        console.log(`Ex-aequo`);
     }
 }
 
