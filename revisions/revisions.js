@@ -15,13 +15,13 @@ function countEach(string) {
     let o = 0;
     let stringOrder = string.split("");
     for (i = 0; i < stringOrder.length; i++) {
-        if (stringOrder[i] === "o") {
-            x++;
-        } else {
+        if (stringOrder[i] === "o" || stringOrder[i] === "O") {
             o++;
+        } else if (stringOrder[i] === "x" || stringOrder[i] === "X" ) {
+            x++;
         }
     }
-    if (x === o) {
+    if (x === o && x != 0 && o != 0) {
         return true;
     } else {
         return false;
@@ -82,7 +82,12 @@ function makeItSpongebob(string) {
     return spongebob;
 }
 
-let resultSpongebob = "Javascript is bad";
+let resultSpongebob = "JAvaScRipT iS baD";
 
 resultSpongebob = makeItSpongebob(resultSpongebob);
+console.log(resultSpongebob);
+
+resultSpongebob = "XOXO";
+
+resultSpongebob = countEach(resultSpongebob);
 console.log(resultSpongebob);
