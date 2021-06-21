@@ -79,7 +79,7 @@ function generatePassword(num) {
     if (num < 6 || num > 15) {
         console.log("Error !");
     } else {
-        for (i = 0; i < num; i++) {
+        for (i = 0; i <= num; i++) {
             let random = Math.random() * (122 - 97) + 97;
             console.log(random);
             let test = String.fromCharCode(random);
