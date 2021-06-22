@@ -1,8 +1,5 @@
-function calculate() {
+/* function calculate(firstNumber, secondNumber, operator) {
     let result;
-    let operator = process.argv[4];
-    let firstNumber = parseInt(process.argv[2]);
-    let secondNumber = parseInt(process.argv[3]);
     switch (operator) {
         case "+":
             result = firstNumber + secondNumber;
@@ -22,4 +19,18 @@ function calculate() {
 
 }
 
-calculate();
+let operator = process.argv[4];
+let firstNumber = parseInt(process.argv[2]);
+let secondNumber = parseInt(process.argv[3]);
+
+calculate(firstNumber, secondNumber, operator);
+ */
+
+let test = require("./table-utils.js");
+
+let a = parseInt(process.argv[2]);
+
+let b = parseInt(process.argv[2]);
+
+test.multiply(a);
+test.addition(b);
