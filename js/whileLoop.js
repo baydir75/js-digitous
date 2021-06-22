@@ -25,7 +25,8 @@ let tysonGay = 0;
 while (usainBolt < 100 || tysonGay < 100) {
     usainBolt += Math.round(Math.random() * (10 - 1) + 1);
     tysonGay += Math.round(Math.random() * (10 - 1) + 1);
-
+    console.log(usainBolt);
+    console.log(tysonGay);
     if (usainBolt >= 100) {
         console.log(`Usain Bolt a gagné ! Score : ${usainBolt}`);
         return;
