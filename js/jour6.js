@@ -1,6 +1,6 @@
 /* Exo 1 */
 
-let exoDate = new Date();
+/* let exoDate = new Date();
 
 let finalDate;
 
@@ -23,4 +23,22 @@ function formatDate(dateToConvert) {
 
 finalDate = formatDate(exoDate);
 
-console.log(finalDate);
+console.log(finalDate); */
+
+/* Exo 2 */
+
+let birthDate = "07/04/1994";
+let age;
+
+function calculateAge(input) {
+    let result = new Date(input).getFullYear();
+    let now = Date.now();
+    now = new Date(now).getFullYear();
+    age = now - result;
+    return age;
+}
+
+age = calculateAge(birthDate);
+console.log(age);
+
+/* Exo 3 */
