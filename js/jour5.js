@@ -74,3 +74,26 @@ play(); */
 
 /* Bonus */
 
+let colors = require("colors");
+
+let prompt = require("prompt");
+
+let mysteryWord = "Table";
+
+let gameWord = mysteryWord.toUpperCase().split("");
+
+console.log(gameWord);
+
+prompt.start();
+
+function motus() {
+
+    prompt.get({ name: "input", description: "Devinez le mot mystere" }, function (err, res) {
+        if (mysteryWord.length === 5) {
+            let compareWord = res.input.toUpperCase().split("");
+            let k = 
+        }
+    })
+}
+
+motus();
