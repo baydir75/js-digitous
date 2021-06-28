@@ -82,6 +82,8 @@ let mysteryWord = "Table";
 
 let gameWord = mysteryWord.toUpperCase().split("");
 
+let wordTry = [];
+
 console.log(gameWord);
 
 prompt.start();
@@ -89,9 +91,21 @@ prompt.start();
 function motus() {
 
     prompt.get({ name: "input", description: "Devinez le mot mystere" }, function (err, res) {
-        if (mysteryWord.length === 5) {
+        if (res.input.length === 5) {
             let compareWord = res.input.toUpperCase().split("");
-            let k = 
+            for (i = 0; i < gameWord.length; i++) {
+                if (gameWord.includes(compareWord[i]) && gameWord[i] === compareWord[i]) {
+                    console.log(compareWord[i].red);
+                } else if (gameWord.includes(compareWord[i]) && gameWord[i] !== compareWord[i]) {
+                    console.log(compareWord[i].green);
+                } else {
+                    console.log(compareWord[i]);
+                }
+            }
+
+            /* console.log(wordTry); */
+        } else {
+            console.log("Erreur: Input trop long ou trop court");
         }
     })
 }
