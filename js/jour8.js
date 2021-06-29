@@ -63,7 +63,7 @@ input.get({ name: "userInput", description: "Voulez-vous piocher une carte ? O =
         }
         console.log(playerScore);
         blackJack();
-    } else if (res.userInput.toLowerCase() === "n") {
+    } else if (res.userInput.toLowerCase() === "n" && playerScore >= 16) {
         if (playerScore === 21) {
             console.log("Black Jack ! Vous avez gagné !")
         } else if (playerScore > bankScore) {
@@ -73,6 +73,7 @@ input.get({ name: "userInput", description: "Voulez-vous piocher une carte ? O =
         }
     } else {
         console.log(err);
+        blackJack();
     }
 })
 }
