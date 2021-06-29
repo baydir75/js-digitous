@@ -58,7 +58,7 @@ console.log(even); */
 
 /* Exo 6 */
 
-let cakes = [
+/* let cakes = [
 	{
 		name: "cake",
 		flavor: "vanilla",
@@ -91,8 +91,19 @@ let soldOut = cakes.map(item => {
     newObj.name = item.name;
     newObj.flavor = item.flavor;
     newObj.status = item.status;
+	if (newObj.flavor === "chocolate") {
+		newObj.status = "Sold Out !";
+	}
     return newObj;
     }
 )
 
 console.log(soldOut);
+
+let finalCakes = soldOut.filter(item => {
+	return item.status === "Sold Out !";
+})
+
+console.log(finalCakes); */
+
+/* Bonus Pendu */
