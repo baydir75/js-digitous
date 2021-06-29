@@ -40,4 +40,41 @@ getFacts(); */
 
 catchPokemon(150);
  */
+
 /* Bonus */
+
+let playerScore = 0;
+
+let bankScore = Math.round(Math.random() * (21 - 16) + 16);
+
+console.log(bankScore);
+
+let input = require("prompt");
+input.start;
+
+function blackJack() {
+input.get({ name: "userInput", description: "Voulez-vous piocher une carte ? O = Oui/N = Non" }, function (err, res) {
+    if (res.userInput.toLowerCase() === "o") {
+        playerScore += Math.round(Math.random() * (10 - 1) + 1);
+        if (playerScore > 21) {
+            console.log(playerScore);
+            console.log("Game Over");
+            return
+        }
+        console.log(playerScore);
+        blackJack();
+    } else if (res.userInput.toLowerCase() === "n") {
+        if (playerScore === 21) {
+            console.log("Black Jack ! Vous avez gagné !")
+        } else if (playerScore > bankScore) {
+            console.log("Felicitation ! Vous avez gagné");
+        } else if (playerScore < bankScore) {
+            console.log("Perdu ! Dommage...");
+        }
+    } else {
+        console.log(err);
+    }
+})
+}
+
+blackJack();
